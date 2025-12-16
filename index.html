@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Welcome to Colla</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec13a4",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#22101c",
+                        "text-main": "#181116",
+                        "text-secondary": "#89617c",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-text-main dark:text-white flex justify-center min-h-screen">
+<!-- Mobile Container -->
+<div class="relative flex h-full w-full max-w-[420px] flex-col bg-white dark:bg-background-dark shadow-2xl min-h-screen overflow-hidden">
+<!-- Header Section -->
+<div class="pt-10 px-6 pb-2">
+<!-- Brand Mark -->
+<div class="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-2xl">grid_view</span>
+</div>
+<h1 class="text-text-main dark:text-white tracking-tight text-[32px] font-extrabold leading-tight text-left pb-2">
+                Welcome to Colla
+            </h1>
+<p class="text-text-secondary dark:text-gray-400 text-base font-medium leading-relaxed text-left max-w-[90%]">
+                Fundraising made simple. Who are you logging in as?
+            </p>
+</div>
+<!-- Role Selection -->
+<div class="px-6 py-6 flex flex-col gap-4">
+<!-- Admin Option (Unselected State) -->
+<label class="cursor-pointer group relative">
+<input class="peer sr-only" name="role" type="radio" value="admin"/>
+<div class="flex items-center justify-between p-4 rounded-xl border border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm transition-all duration-200 peer-checked:border-primary peer-checked:bg-primary/5 hover:border-gray-300 dark:hover:border-gray-600">
+<div class="flex items-center gap-4">
+<div class="h-12 w-12 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400">
+<span class="material-symbols-outlined">admin_panel_settings</span>
+</div>
+<div class="flex flex-col">
+<span class="text-text-main dark:text-white text-base font-bold leading-tight">Admin</span>
+<span class="text-text-secondary dark:text-gray-400 text-sm font-normal">Manage campaigns</span>
+</div>
+</div>
+<!-- Selection Indicator -->
+<div class="h-6 w-6 rounded-full border-2 border-gray-200 dark:border-gray-600 flex items-center justify-center peer-checked:border-primary peer-checked:bg-primary transition-colors">
+<span class="material-symbols-outlined text-white text-[14px] opacity-0 peer-checked:opacity-100">check</span>
+</div>
+</div>
+</label>
+<!-- Seller Option (Selected State for Demo) -->
+<label class="cursor-pointer group relative">
+<input checked="" class="peer sr-only" name="role" type="radio" value="seller"/>
+<div class="flex items-center justify-between p-4 rounded-xl border-2 border-primary bg-primary/5 dark:bg-primary/10 shadow-sm transition-all duration-200">
+<div class="flex items-center gap-4">
+<div class="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">storefront</span>
+</div>
+<div class="flex flex-col">
+<span class="text-text-main dark:text-white text-base font-bold leading-tight">Seller</span>
+<span class="text-text-secondary dark:text-gray-400 text-sm font-normal">Join a team</span>
+</div>
+</div>
+<!-- Selection Indicator -->
+<div class="h-6 w-6 rounded-full border-2 border-primary bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[14px]">check</span>
+</div>
+</div>
+</label>
+</div>
+<!-- Input Field -->
+<div class="px-6 pb-2">
+<div class="flex flex-col w-full">
+<label class="text-text-main dark:text-white text-sm font-bold leading-normal pb-2 ml-1">Phone or Email</label>
+<div class="relative flex items-center">
+<input class="form-input flex w-full resize-none overflow-hidden rounded-xl text-text-main dark:text-white dark:bg-gray-800 focus:outline-0 focus:ring-0 border border-gray-200 dark:border-gray-700 focus:border-primary h-14 placeholder:text-text-secondary dark:placeholder:text-gray-500 px-4 pl-12 text-base font-normal leading-normal transition-colors" placeholder="Enter your mobile number or email" type="text" value=""/>
+<div class="absolute left-4 text-text-secondary dark:text-gray-500 flex items-center justify-center pointer-events-none">
+<span class="material-symbols-outlined">perm_identity</span>
+</div>
+</div>
+<p class="text-text-secondary dark:text-gray-500 text-xs mt-3 ml-1">
+                    We'll send you a verification code to confirm your account.
+                </p>
+</div>
+</div>
+<!-- Spacer -->
+<div class="flex-1"></div>
+<!-- Footer / CTA -->
+<div class="p-6">
+<button class="w-full h-14 rounded-xl bg-primary hover:bg-primary/90 active:scale-[0.98] transition-all text-white text-lg font-bold shadow-[0_4px_10px_rgba(236,19,164,0.3)] flex items-center justify-center gap-2">
+<span>Continue</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<p class="text-center text-text-secondary dark:text-gray-500 text-xs mt-4">
+                By continuing, you agree to our <a class="underline decoration-1 underline-offset-2" href="#">Terms</a> and <a class="underline decoration-1 underline-offset-2" href="#">Privacy Policy</a>.
+            </p>
+</div>
+</div>
+</body></html>
